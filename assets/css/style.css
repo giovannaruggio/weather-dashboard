@@ -16,3 +16,14 @@ header {
     padding: 40px;
 }
 
+.badge-success {
+    color: green;
+}
+
+.badge-warning {
+    color: orange;
+}
+
+.badge-danger {
+    color: red;
+}
