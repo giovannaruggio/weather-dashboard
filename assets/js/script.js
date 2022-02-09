@@ -4,6 +4,10 @@ var queryURL = 'http://api.openweathermap.org/data/2.5/weather?q=';
 var today = moment(). format('L');
 var cityHistory = [];
 
+// Hide 5 Day Forecast upon loading page
+$('.forecast').hide();
+
+
 // renderCities function to save searched cities to page
 function renderCities() {
 	var city = $('#city-input').val().trim();
@@ -19,7 +23,7 @@ function renderCities() {
 };
 
 // Get previously searched cities from storage
-function inti() {
+function intit() {
 	var storedCities = JSON.parse(localStorage.getItem('city'));
 	if (storedCities !== null) {
 		city = storedCities;
@@ -31,6 +35,8 @@ function inti() {
 // Event listener to submit search
 $('#city-form').submit(function(event){
 	event.preventDefault();
+
+	$('.forecast').show();
 
 	renderCities();
 

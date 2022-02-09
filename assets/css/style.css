@@ -16,6 +16,21 @@ header {
     padding: 40px;
 }
 
+.r1 {
+    padding: 20px;
+}
+
+.li {
+    padding: 0px !important;
+}
+
+.weather {
+    position: relative;
+    left: 40%;
+    top: -120px;
+}
+
+
 .badge-success {
     color: green;
 }
